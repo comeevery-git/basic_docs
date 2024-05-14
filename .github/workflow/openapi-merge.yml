@@ -3,7 +3,7 @@ name: Merge OpenAPI Specs
 on:
   push:
     branches:
-      - main
+      - docs
 
 jobs:
   merge-openapi-specs:
