@@ -5,9 +5,22 @@
     "description": "API for managing users",
     "version": "1.0.0"
   },
+  "tags": [
+    {
+      "name": "user",
+      "description": "Everything about your Users",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://swagger.io"
+      }
+    }
+  ],
   "paths": {
     "/user": {
       "get": {
+        "tags": [
+          "user"
+        ],
         "summary": "Get all users",
         "operationId": "getUsers",
         "responses": {
@@ -27,6 +40,9 @@
         }
       },
       "post": {
+        "tags": [
+          "user"
+        ],
         "summary": "Create a new user",
         "operationId": "createUser",
         "requestBody": {
@@ -56,6 +72,9 @@
     },
     "/user/{userId}": {
       "get": {
+        "tags": [
+          "user"
+        ],
         "summary": "Get a user by ID",
         "operationId": "getUserById",
         "parameters": [
@@ -85,6 +104,9 @@
         }
       },
       "put": {
+        "tags": [
+          "user"
+        ],
         "summary": "Update a user",
         "operationId": "updateUser",
         "parameters": [
@@ -125,6 +147,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "user"
+        ],
         "summary": "Delete a user",
         "operationId": "deleteUser",
         "parameters": [
