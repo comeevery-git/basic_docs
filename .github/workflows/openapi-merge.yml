@@ -24,7 +24,7 @@ jobs:
       - name: Merge OpenAPI specs
         run: |
           echo "::group::Merging OpenAPI specs"
-          jq -s '.[0] * .[1]' docs/petstore-api-docs.json docs/user-api-docs.json > docs/merged-api-docs.json
+          jq -s 'reduce .[] as $item ({}; . * $item)' docs/*.json > docs/merged-api-docs.json
           echo "::endgroup::"
 
       - name: Generate Redoc HTML
