@@ -12,7 +12,8 @@
 #### 테스트 내용
 1. springdoc Swagger 를 활용 한 임시 컨트롤러 추가
 2. 어플리케이션 실행 시 docs 패키지 하위에 .json 파일 추출
-   - 추후 Github Actions 로 어떠한 브런치에 push 시, AWS S3 경로에 파일 떨구도록 수정하여 사용하면 될 듯
+   - 추후 Github Actions 로 어떠한 브런치에 push 시, AWS S3 에 파일 떨구도록 수정하여 사용하면 될 듯
+   - 현재는 로컬에 파일을 저장하도록 설정되어 있음, 현재는 추출 된 json 파일도 함께 커밋해야함
 3. 추출된 .json 파일들을 redoc-cli 로 병합
 4. 병합된 json 파일로 Redoc html 파일 생성
 5. 생성된 html 파일을 Github Pages 에 배포
